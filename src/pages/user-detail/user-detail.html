@@ -1,0 +1,43 @@
+<!--
+  Generated template for the UserDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{userData?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card>
+      <img src="{{userData?.avatar_url}}"/>
+      <ion-card-content>
+        <ion-card-title>
+            {{userData?.name}}
+          </ion-card-title>
+        <p>
+            {{userData?.bio}}
+        </p>
+      </ion-card-content>
+      <ion-row no-padding>
+          <ion-col>
+            <button ion-button clear small color="danger" icon-start>
+              <ion-icon name='logo-github'></ion-icon>
+              {{userData?.public_gists}} Gists
+            </button>
+          </ion-col>
+          <ion-col text-center>
+            <button ion-button clear small color="danger" icon-start>
+              <ion-icon name='ios-git-network'></ion-icon>
+              {{userData?.public_repos}} Repo
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-card>
+  
+</ion-content>
