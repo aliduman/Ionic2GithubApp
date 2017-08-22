@@ -1,5 +1,3 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
-
 ## IONIC2 GİTHUP API PROJECT APP
 
 **
