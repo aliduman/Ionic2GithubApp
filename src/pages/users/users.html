@@ -18,10 +18,10 @@
 
 <ion-content>
   <ion-list>
-      <ion-list-header>
-          Github Top Users
-      </ion-list-header>
-      <button ion-item *ngFor="let user of getGithubUsersData" (click)="userDetail($event, user.login)">
+    <ion-list-header>
+      Github Top Users
+    </ion-list-header>
+    <button ion-item *ngFor="let user of getGithubUsersData" (click)="userDetail($event, user.login)">
         <ion-avatar item-start>
           <img src="{{user.avatar_url}}">
         </ion-avatar>
