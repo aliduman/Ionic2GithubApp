@@ -10,9 +10,10 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class DataServiceProvider {
+  reposData: any;
 
-  getGithubUsersData:any;
-  getUserData:any;
+  getGithubUsersData: any;
+  getUserData: any;
 
   constructor(public http: Http) {
     console.log('Hello DataServiceProvider Provider');
@@ -20,22 +21,33 @@ export class DataServiceProvider {
 
   list() {
     return new Promise(resolve => {
-        this.http.get('https://api.github.com/users')
-            .map(res => res.json())
-            .subscribe(data => {
-                this.getGithubUsersData = data;
-                resolve(this.getGithubUsersData);
-            });
+      this.http.get('https://api.github.com/users')
+        .map(res => res.json())
+        .subscribe(data => {
+          this.getGithubUsersData = data;
+          resolve(this.getGithubUsersData);
+        });
     });
   }
-  detail(login){
+  detail(login) {
     return new Promise(resolve => {
-      this.http.get('https://api.github.com/users/'+login)
-          .map(res => res.json())
-          .subscribe(data => {
-              this.getUserData = data;
-              resolve(this.getUserData);
-          });
-  });
+      this.http.get('https://api.github.com/users/' + login)
+        .map(res => res.json())
+        .subscribe(data => {
+          this.getUserData = data;
+          resolve(this.getUserData);
+        });
+    });
+  }
+  repos(login){
+    return new Promise(resolve =>  {
+      this.http.get('https://api.github.com/users/'+login+'/repos')
+      .map(res => res.json())
+      .subscribe(data=>{
+        this.reposData = data;
+        resolve(this.reposData);
+      });    
+      }
+    );
   }
 }

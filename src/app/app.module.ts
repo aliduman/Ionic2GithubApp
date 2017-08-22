@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -8,7 +7,7 @@ import { MyApp } from './app.component';
 import { AnaSayfa } from '../pages/home/home';
 import { ListeSayfasi } from '../pages/list/list';
 import { UsersPage } from '../pages/users/users';
-import { UserDetailPage } from './../pages/user-detail/user-detail';
+import { UserDetailPage, Profile } from './../pages/user-detail/user-detail';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,7 +20,8 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     AnaSayfa,
     ListeSayfasi,
     UsersPage,
-    UserDetailPage
+    UserDetailPage,
+    Profile
   ],
   imports: [
     BrowserModule,
@@ -34,7 +34,8 @@ import { DataServiceProvider } from '../providers/data-service/data-service';
     AnaSayfa,
     ListeSayfasi,
     UsersPage,
-    UserDetailPage
+    UserDetailPage,
+    Profile
   ],
   providers: [
     StatusBar,

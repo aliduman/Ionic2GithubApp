@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { DataServiceProvider } from '../../providers/data-service/data-service';
 
 import { UserDetailPage } from './../user-detail/user-detail';
@@ -18,28 +18,28 @@ import { UserDetailPage } from './../user-detail/user-detail';
   providers: [DataServiceProvider]
 })
 export class UsersPage {
-  users:any;
-  name:string;
-  message:string;
-  getGithubUsersData:any;
+  users: any;
+  name: string;
+  message: string;
+  getGithubUsersData: any;
   constructor
-  (
-    public navCtrl: NavController, 
+    (
+    public navCtrl: NavController,
     public navParams: NavParams,
     public toastCtrl: ToastController,
     public dataServiceProvider: DataServiceProvider
-  ) 
-  {
+    ) {
     /**program başladığında ilk çalışan alan.. */
     this.getGithubUsers();
   }
-  addData(data){
+  addData(data) {
     console.log(data);
   }
-  getGithubUsers(){
+  getGithubUsers() {
     let toast = this.toastCtrl.create({
       message: 'Users Loaded..',
-      duration: 1000
+      duration: 1000,
+      position: 'left'
     });
     this.dataServiceProvider.list().then(data => {
       this.getGithubUsersData = data;

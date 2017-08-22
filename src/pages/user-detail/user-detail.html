@@ -32,7 +32,7 @@
             </button>
           </ion-col>
           <ion-col text-center>
-            <button ion-button clear small color="danger" icon-start>
+            <button ion-button clear small color="danger" icon-start (click)="presentProfileModal()">
               <ion-icon name='ios-git-network'></ion-icon>
               {{userData?.public_repos}} Repo
             </button>

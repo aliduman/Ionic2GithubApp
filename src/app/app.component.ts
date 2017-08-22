@@ -1,6 +1,6 @@
 
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, ViewController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -26,7 +26,7 @@ export class MyApp {
     this.pages = [
       { title: 'Ana Sayfa', component: AnaSayfa },
       { title: 'Listeleme Sayfası', component: ListeSayfasi },
-      { title: 'Kullanıcılar', component: UsersPage }
+      { title: 'Github Top Users', component: UsersPage }
     ];
 
   }
