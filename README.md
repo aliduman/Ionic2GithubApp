@@ -1,4 +1,4 @@
-## IONIC2 GİTHUP API PROJECT APP
+## IONIC2 Github Api App
 
 **
 
